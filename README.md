@@ -47,7 +47,9 @@ $ crc setup
 crc start -p ~/Downloads/pull-secret.txt
 
 If you receive an error "Error starting machine: Error in driver during machine start: virError(Code=9, Domain=10, Message='operation failed: Unable to find a satisfying virtiofsd')" then run below commands ;
+
 sudo apt install virtiofsd
+
 sudo apt install virt-manager
 
 After a few minutes, the cluster is up and running and crc prints the connection information:

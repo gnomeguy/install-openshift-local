@@ -45,4 +45,28 @@ $ crc setup
 
 **Start OpenShift Local**
 crc start -p ~/Downloads/pull-secret.txt
+
+If you receive an error "Error starting machine: Error in driver during machine start: virError(Code=9, Domain=10, Message='operation failed: Unable to find a satisfying virtiofsd')" then run below commands ;
+sudo apt install virtiofsd
+sudo apt install virt-manager
+
+After a few minutes, the cluster is up and running and crc prints the connection information:
+
+Started the OpenShift cluster.
+
+The server is accessible via web console at:
+  https://console-openshift-console.apps-crc.testing
+
+Log in as administrator:
+  Username: kubeadmin
+  Password: *****-****-****-47t22
+
+Log in as user:
+  Username: developer
+  Password: developer
+
+Use the 'oc' command line interface:
+  $ eval $(crc oc-env)
+  $ oc login -u developer https://api.crc.testing:6443
   
+For detailed info : https://www.redhat.com/en/blog/install-openshift-local

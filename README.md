@@ -38,6 +38,7 @@ OpenShift version: 4.12.9
 Podman version: 4.4.1
 
 $ echo 'export PATH=$HOME/local/bin:$PATH' >> ~/.bashrc
+
 **Set up your machine**
 
 $ crc config set consent-telemetry no
@@ -50,6 +51,7 @@ $ crc config view
 $ crc setup
 
 **Start OpenShift Local**
+
 crc start -p ~/Downloads/pull-secret.txt
 
 If you receive an error "Error starting machine: Error in driver during machine start: virError(Code=9, Domain=10, Message='operation failed: Unable to find a satisfying virtiofsd')" then run below commands ;
@@ -63,14 +65,19 @@ After a few minutes, the cluster is up and running and crc prints the connection
 Started the OpenShift cluster.
 
 The server is accessible via web console at:
+
   https://console-openshift-console.apps-crc.testing
 
 Log in as administrator:
+
   Username: kubeadmin
+  
   Password: *****-****-****-47t22
 
 Log in as user:
+
   Username: developer
+  
   Password: developer
 
 Use the 'oc' command line interface:
